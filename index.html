@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Meta and head section -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ravendra — Health & Lifestyle Coach</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Personalized health, diet and lifestyle coaching by Ravendra — Weight management, stress management, kid nutrition and workout coaching." />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body background="resource/bg2.jpg">
+
+    <!-- Sticky Social Bar -->
+    <div class="social-bar">
+
+
+        <a href="https://instagram.com/ravendrawellness" target="_blank" rel="noopener" title="Instagram"
+            class="social-icon instagram"><img src="https://img.icons8.com/color/48/000000/instagram-new.png"
+                alt="Instagram" /></a>
+
+        <a href="https://facebook.com/ravendrahunk" target="_blank" title="Facebook" class="social-icon facebook"><img
+                src="https://img.icons8.com/3d-fluency/94/facebook-logo.png" alt="Facebook" /></a>
+
+        <a href="https://youtube.com/" target="_blank" rel="noopener" title="Youtube" class="social-icon youtube-play"><img
+                src="https://img.icons8.com/color/48/youtube-play.png" alt="Youtube" /></a>
+    </div>
+    <!-- Main wrapper -->
+    <div class="wrap">
+        <!-- Header and navigation -->
+        <header>
+            <div class="brand">
+                <div class="logo">R</div>
+                <div>
+                    <div style="font-weight:700">Ravendra</div>
+                    <div style="font-size:13px;color:#556a61">Health & Lifestyle Coach</div>
+                </div>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="https://wa.me/919670746665" target="_blank" class="cta">WhatsApp Me</a>
+            </nav>
+        </header>
+
+        <!-- Main content -->
+        <main>
+            <!-- Hero section with intro and highlights -->
+            <section class="hero">
+                <div>
+                    <h1>Personalized coaching for lasting health & balance</h1>
+                    <p>Customized diet plans, lifestyle routines and gentle workout guidance to help you lose, gain or
+                        maintain weight — and feel better every day.</p>
+                    <div class="actions">
+                        <!-- <a href="#contact" class="card" style="text-decoration:none"><strong>Book a free 
+                            consult</strong></a>-->
+
+                        <a class="card" href="#testimonials" style="text-decoration:none"><strong>Watch client stories</strong></a>
+                    </div>
+
+                    <div class="card highlights" style="margin-top:18px">
+                        <strong>Highlights</strong>
+                        <div style="display:flex;gap:12px;margin-top:10px;flex-wrap:wrap">
+                            <span style="background:var(--glass);padding:8px 12px;border-radius:12px">Weight
+                                Management</span>
+                            <span style="background:var(--glass);padding:8px 12px;border-radius:12px">Stress
+                                Management</span>
+                            <span style="background:var(--glass);padding:8px 12px;border-radius:12px">Kid
+                                Nutrition</span>
+                            <span style="background:var(--glass);padding:8px 12px;border-radius:12px">Workout
+                                Sessions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick contact form -->
+                <aside class="card" aria-hidden="false">
+                    <h3 style="margin-top:0">Start your journey</h3>
+                    <p style="margin-bottom:8px">Share a few details and get a free 15-minute consultation.</p>
+                    <form id="miniForm">
+                        <input type="text" name="name" placeholder="Your name" required />
+                        <input type="tel" name="phone" placeholder="Phone (with country code)" required />
+                        <select name="goal" style="padding:10px;border-radius:10px">
+                            <option value="weight-loss">Lose weight</option>
+                            <option value="weight-gain">Gain weight</option>
+                            <option value="maintain">Maintain weight</option>
+                            <option value="general-wellness">General wellness</option>
+                        </select>
+                        <button type="submit" class="primary">Request callback</button>
+                    </form>
+                </aside>
+            </section>
+
+            <!-- Hero image added -->
+
+            <!-- Hero image slider section -->
+            <section style="display:flex;justify-content:center;align-items:center;">
+                <div class="hero-slider"
+                    style="position:relative;height:400px;max-height:400px;margin:18px auto 0 auto;display:flex;justify-content:center;align-items:center;">
+                    <!-- Each image is a slide in the hero slider -->
+                    <img id="slide" class="hero-slide" src="resource/img/weight-loss1.png" alt="Healthy lifestyle 1"
+                        style="height: 400px;border-radius:18px;box-shadow:0 8px 32px rgba(81,158,57,0.10);display:block;" />
+                    <img id="slide" class="hero-slide" src="resource/img/weight-loss2.png" alt="Healthy lifestyle 2"
+                        style="height: 400px;border-radius:18px;box-shadow:0 8px 32px rgba(81,158,57,0.10);display:none;" />
+                    <img id="slide" class="hero-slide" src="resource/img/weight-loss1.png" alt="Healthy lifestyle 3"
+                        style="height: 400px;border-radius:18px;box-shadow:0 8px 32px rgba(81,158,57,0.10);display:none;" />
+                    <!-- Previous and Next buttons for manual navigation -->
+                    <button type="button" class="hero-slider-btn" id="heroPrev" aria-label="Previous"
+                        style="position:absolute;top:50%;left:8px;transform:translateY(-50%);background:rgba(0,0,0,0.3);color:#fff;border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;font-size:18px;">&#8592;</button>
+                    <button type="button" class="hero-slider-btn" id="heroNext" aria-label="Next"
+                        style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:rgba(0,0,0,0.3);color:#fff;border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;font-size:18px;">&#8594;</button>
+                </div>
+            </section>
+
+            <!-- Services section -->
+            <section id="services">
+                <h2 style="margin-top:32px">Services</h2>
+
+                <div class="grid-services">
+                    <div class="service card">
+                        <img src="https://img.icons8.com/color/96/000000/mountain.png" alt="Lifestyle"
+                            style="width:40px;height:40px;margin-bottom:8px;" />
+                        <h3>Lifestyle Management</h3>
+                        <p>Daily routines, sleep, stress reduction and practical habits for sustainable wellbeing.</p>
+                    </div>
+                    <div class="service card">
+                        <img src="https://img.icons8.com/color/48/000000/scale.png" alt="Weight"
+                            style="width:40px;height:40px;margin-bottom:8px;" />
+                        <h3>Weight Management</h3>
+                        <p>Personalized plans to lose, gain or maintain weight with clear weekly goals.</p>
+                    </div>
+                    <div class="service card">
+                        <img src="https://img.icons8.com/color/48/000000/meditation-guru.png" alt="Stress"
+                            style="width:40px;height:40px;margin-bottom:8px;" />
+                        <h3>Stress Management</h3>
+                        <p>Breathing practices, simple mindfulness and schedule adjustments to reduce burnout.</p>
+                    </div>
+                    <div class="service card">
+                        <img src="https://img.icons8.com/color/48/000000/salad.png" alt="Diet"
+                            style="width:40px;height:40px;margin-bottom:8px;" />
+                        <h3>Diet & Nutrition</h3>
+                        <p>Balanced meal plans, recipes and grocery lists tailored for your needs or your child.</p>
+                    </div>
+                    <div class="service card">
+                        <img src="https://img.icons8.com/color/48/000000/baby-bottle.png" alt="Kid Nutrition"
+                            style="width:40px;height:40px;margin-bottom:8px;" />
+                        <h3>Kid Nutrition</h3>
+                        <p>Practical, tasty and nutritious approaches for growing children and picky eaters.</p>
+                    </div>
+                    <div class="service card">
+                        <img src="https://img.icons8.com/color/48/000000/dumbbell.png" alt="Workout"
+                            style="width:40px;height:40px;margin-bottom:8px;" />
+                        <h3>Workout Sessions</h3>
+                        <p>Simple guided sessions you can do at home — no special equipment required.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials section -->
+            <section id="testimonials" class="testimonials">
+                <h2>Testimonials</h2>
+                <div class="card">
+                    <div id="videoContainer" class="video-wrap">
+                        <!-- Replace with your video embed links or upload host videos -->
+                        <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Testimonial 1" allowfullscreen
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="testimonial-controls" role="tablist" aria-label="Testimonial controls">
+                        <button data-vid="https://www.youtube.com/embed/ScMzIvxBSi4">1</button>
+                        <button data-vid="https://www.youtube.com/embed/tgbNymZ7vqY">2</button>
+                        <button data-vid="https://www.youtube.com/embed/ysz5S6PUM-U">3</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About section -->
+            <section id="about" class="about">
+                <div>
+                    <h2>About Ravendra</h2>
+                    <p>I am Ravendra — a health coach dedicated to helping people improve their diet and lifestyle
+                        through personalised plans of action. I focus on practical, sustainable changes that fit your
+                        life. Whether you want to lose, gain or maintain weight, I’ll provide the guidance and nutrition
+                        information to keep your body healthy.</p>
+                    <ul style="margin-top:12px">
+                        <li>Personalized diet & weekly plans</li>
+                        <li>1:1 coaching and progress tracking</li>
+                        <li>Family & kid-friendly nutrition</li>
+                    </ul>
+                    <!-- Responsive social media icon buttons -->
+                    <div class="social-icons" style="margin-top:18px;display:flex;gap:14px;flex-wrap:wrap;"></div>
+                    <a href="https://www.instagram.com/ravendrawellness" target="_blank" aria-label="Instagram"
+                        style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#f4f4f4;box-shadow:0 2px 8px rgba(0,0,0,0.04);transition:background 0.2s;">
+                        <img src="https://img.icons8.com/3d-fluency/94/instagram-logo.png" alt="Instagram"
+                            style="width:24px;height:24px;" />
+                    </a>
+                    <a href="https://www.facebook.com/ravendrahunk" target="_blank" aria-label="Facebook"
+                        style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#f4f4f4;box-shadow:0 2px 8px rgba(0,0,0,0.04);transition:background 0.2s;">
+                        <img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook"
+                            style="width:24px;height:24px;" />
+                    </a>
+                    <a href="https://wa.me/919670746665" target="_blank" aria-label="WhatsApp"
+                        style="display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#f4f4f4;box-shadow:0 2px 8px rgba(0,0,0,0.04);transition:background 0.2s;">
+                        <img src="https://img.icons8.com/ios-filled/28/25d366/whatsapp.png" alt="WhatsApp"
+                            style="width:24px;height:24px;" />
+                    </a>
+                </div>
+                <img src="profile.png" alt="Ravendra portrait" />
+    </div>
+    </section>
+
+
+    <!-- Contact section -->
+    <section id="contact" class="contact" style="display:flex; justify-content:center;align-items:center;">
+        <aside class="card">
+            <h3>Quick contact</h3>
+            <p><strong>WhatsApp:</strong> <a id="waLink" href="#">+91 9670746665</a></p>
+            <p><strong>Email:</strong> <a href="mailto:singhravenra38@gmail.com">singhravendra38@gmail.com</a></p>
+            <p style="font-size:13px;color:#5a6b60">Or click the green WhatsApp button anytime.</p>
+        </aside>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <small>© <span id="year"></span> Ravendra — Health & Lifestyle Coach <br>Crafted by dev.ravi</small>
+    </footer>
+    </main>
+
+
+    <!-- Floating WhatsApp button: replace phone number in the href with your number (country code, no plus). -->
+    <!-- Floating WhatsApp button -->
+    <div class="whatsapp" aria-hidden="false">
+        <a id="waFloat" href="https://wa.me/919670746665" target="_blank" rel="noopener"><img
+                src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp" /></a>
+    </div>
+
+
+    <script>
+        // --- Hero image slider with auto-slide ---
+        // Get all hero slide images
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        let heroIndex = 0;
+        let heroTimer = null;
+
+        // Show the slide at the given index, hide others
+        function showHeroSlide(idx) {
+            heroSlides.forEach((img, i) => {
+                img.style.display = (i === idx) ? 'block' : 'none';
+            });
+        }
+
+        // Go to next slide
+        function nextHeroSlide() {
+            heroIndex = (heroIndex + 1) % heroSlides.length;
+            showHeroSlide(heroIndex);
+        }
+
+        // Go to previous slide
+        function prevHeroSlide() {
+            heroIndex = (heroIndex - 1 + heroSlides.length) % heroSlides.length;
+            showHeroSlide(heroIndex);
+        }
+
+        // Start or restart the auto-slide timer
+        function startHeroAutoSlide() {
+            if (heroTimer) clearInterval(heroTimer);
+            heroTimer = setInterval(nextHeroSlide, 3500); // Change slide every 3.5 seconds
+        }
+
+        // Manual navigation: previous button
+        document.getElementById('heroPrev').onclick = function () {
+            prevHeroSlide();
+            startHeroAutoSlide(); // Restart timer on manual navigation
+        };
+
+        // Manual navigation: next button
+        document.getElementById('heroNext').onclick = function () {
+            nextHeroSlide();
+            startHeroAutoSlide(); // Restart timer on manual navigation
+        };
+
+        // Initialize slider
+        showHeroSlide(heroIndex);
+        startHeroAutoSlide();
+    </script>
+</body>
+
+</html>
