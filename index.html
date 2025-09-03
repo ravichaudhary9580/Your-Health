@@ -31,8 +31,9 @@
         <a href="https://facebook.com/ravendrahunk" target="_blank" title="Facebook" class="social-icon facebook"><img
                 src="https://img.icons8.com/3d-fluency/94/facebook-logo.png" alt="Facebook" /></a>
 
-        <a href="https://youtube.com/" target="_blank" rel="noopener" title="Youtube" class="social-icon youtube-play"><img
-                src="https://img.icons8.com/color/48/youtube-play.png" alt="Youtube" /></a>
+        <a href="https://youtube.com/" target="_blank" rel="noopener" title="Youtube"
+            class="social-icon youtube-play"><img src="https://img.icons8.com/color/48/youtube-play.png"
+                alt="Youtube" /></a>
     </div>
     <!-- Main wrapper -->
     <div class="wrap">
@@ -65,7 +66,8 @@
                         <!-- <a href="#contact" class="card" style="text-decoration:none"><strong>Book a free 
                             consult</strong></a>-->
 
-                        <a class="card" href="#testimonials" style="text-decoration:none"><strong>Watch client stories</strong></a>
+                        <a class="card" href="#testimonials" style="text-decoration:none"><strong>Watch client
+                                stories</strong></a>
                     </div>
 
                     <div class="card highlights" style="margin-top:18px">
@@ -89,14 +91,17 @@
                     <p style="margin-bottom:8px">Share a few details and get a free 15-minute consultation.</p>
                     <form id="miniForm">
                         <input type="text" name="name" placeholder="Your name" required />
-                        <input type="tel" name="phone" placeholder="Phone (with country code)" required />
-                        <select name="goal" style="padding:10px;border-radius:10px">
+                        <input type="text" name="phone" placeholder="Phone (with country code)" required />
+                        <select name="goal" id="goal" style="padding:10px;border-radius:10px">
                             <option value="weight-loss">Lose weight</option>
                             <option value="weight-gain">Gain weight</option>
                             <option value="maintain">Maintain weight</option>
                             <option value="general-wellness">General wellness</option>
                         </select>
                         <button type="submit" class="primary">Request callback</button>
+                        <div id="miniFormMsg"
+                            style="display:none;margin-top:10px;color:var(--green-2);font-weight:600;">Message
+                            submitted! We will contact you soon.</div>
                     </form>
                 </aside>
             </section>
@@ -246,6 +251,15 @@
 
     <script>
         // --- Hero image slider with auto-slide ---
+
+        // Show popup on miniForm submit
+        document.getElementById('miniForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('miniFormMsg').style.display = 'block';
+            setTimeout(function () {
+                document.getElementById('miniFormMsg').style.display = 'none';
+            }, 3000);
+        });
         // Get all hero slide images
         const heroSlides = document.querySelectorAll('.hero-slide');
         let heroIndex = 0;
@@ -291,6 +305,49 @@
         // Initialize slider
         showHeroSlide(heroIndex);
         startHeroAutoSlide();
+
+
+
+
+        const scriptURL =
+            "https://script.google.com/macros/s/AKfycbxAOok-DQYjid28Hbp_k-kBCr9NdiLoF9ZlRPuY-Eo1ygR47rFZGs4BM9VAXJHO0CIK/exec";
+        const form = document.forms["miniForm"];
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            var formData = new FormData(form);
+            var Time = new Date();
+            Time = Time.toLocaleString('en-US', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true // Use 12-hour format with AM/PM
+            })
+            formData.append("time", Time)
+            // console.log(currentTime);
+            // var age = document.getElementById("age").checked;
+
+            // if (age) {
+            //     formData.append("age", "Yes");
+            // } else {
+            //     formData.append("age", "No");
+            // }
+            // if (ex) {
+            //     formData.append("ex", getTime());
+            // } else {
+            //     formData.append("ex", "No");
+            // }
+
+            fetch(scriptURL, { method: "POST", body: formData })
+                .then((response) => {
+                    swal("Done", "Submitted Successfully.", "success");
+                })
+                .catch((error) => {
+                    swal("Error", "Something went wrong. please try again!", "error");
+                });
+        });
     </script>
 </body>
 
