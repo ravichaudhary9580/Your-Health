@@ -348,6 +348,24 @@
                     swal("Error", "Something went wrong. please try again!", "error");
                 });
         });
+
+
+
+        
+        document.getElementById('miniForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Simulate form submission (e.g., sending data to a server)
+            console.log('Form submitted!');
+            // In a real application, you would send data to a server here
+            // using fetch() or XMLHttpRequest
+
+            // After successful submission (or a delay for demonstration)
+            setTimeout(() => {
+                this.reset(); // Reset the form fields
+                console.log('Form reset!');
+            }, 1000); // Simulate a delay for server response
+        });
     </script>
 </body>
 
